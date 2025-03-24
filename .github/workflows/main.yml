@@ -1,4 +1,4 @@
-name: Publish Node Docker
+coname: Publish Node Docker
 on:
   push:
    branches: [ main ]
@@ -15,5 +15,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "" --password-stdin
-        docker image build -t nipatsa/a19d88acf03f66b276a08e3e50d534b9f567d1af2f09f021e0f677bd3c812c5c
-        docker push nipatsa/a19d88acf03f66b276a08e3e50d534b9f567d1af2f09f021e0f677bd3c812c5c
+        docker image build -t nipatsa/egco341:lastest .
+        docker push nipatsa/egco341:lastest
